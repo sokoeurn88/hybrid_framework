@@ -1,21 +1,26 @@
 package com.hybrid_framework.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage{
 	WebDriver ldriver;
 	
+	//create constructor of the class
 	public LoginPage(WebDriver rdriver){
-		ldriver = rdriver;
-		
+		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
-		
 	}
 	
-	public void clickFreeBook() {
-		ldriver.findElement(By.xpath("//div[@class='d-flex web-menu-btn']//li[1]//a[1]")).click();
+	//find all elements
+	@FindBy(xpath = "//a[contains(text(), 'Create new account')]")
+	WebElement createnewaccount;
+	
+	//create method for the webelement
+	public void createNewAccount() {
+		createnewaccount.click();
 	}
-
+	
 }
