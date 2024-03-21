@@ -50,13 +50,13 @@ class BaseClass{
 			driver = new EdgeDriver();
 			
 		}
-		
+		driver.manage().window().maximize();
 		driver.get(baseURL);
 
 	}
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+//		driver.quit();
 	}
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "hybrid_framework">
+	
+	<test name = "BankingApp test">
+				
+		<parameter name="browser" value="chrome" />
+		<!-- <parameter name="browser" value="firefox" /> -->
+		<!-- <parameter name="browser" value="edge" /> -->
+			
+			<classes>
+				
+				<class name="com.hybrid_framework.testcases.TC_LOGIN_001" />
+				
+				<class name="com.hybrid_framework.testcases.TC_ADD_NEW_ACCOUNT_002" />
+					
+
+				
+			</classes>
+	</test>
+
+</suite>
